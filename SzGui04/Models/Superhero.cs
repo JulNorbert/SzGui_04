@@ -34,5 +34,14 @@ namespace SzGui04.Models
             get { return alignment; }
             set { SetProperty(ref alignment, value); }
         }
+        public Superhero GetCopy()
+        {
+            return new Superhero()
+            {
+                Name = this.Name,
+                Power = this.Power,
+                Speed = this.Speed
+            };
+        }
     }
 }
