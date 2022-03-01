@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SzGui04.MainWindowViewModel
+namespace SzGui04.ViewModels
 {
     public class MainWindowViewModel:ObservableRecipient
     {
