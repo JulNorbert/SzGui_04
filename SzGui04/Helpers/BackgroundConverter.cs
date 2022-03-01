@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media;
+using SzGui04.Models;
 
 namespace SzGui04.Helpers
 {
@@ -13,18 +14,18 @@ namespace SzGui04.Helpers
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            double number = double.Parse(value.ToString());
-            if (number < 4)
+            string alignment =value.ToString();
+            if (alignment=="bad")
             {
-                return Brushes.Red;
+                return Brushes.LightSalmon;
             }
-            else if (number < 7)
+            else if (alignment == "neutral")
             {
-                return Brushes.Yellow;
+                return Brushes.LightYellow;
             }
             else
             {
-                return Brushes.Green;
+                return Brushes.LightGreen;
             }
         }
 
