@@ -25,7 +25,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="1">
-                        <Grid Background="{Binding Power, Converter={StaticResource bgconvert}}">
+                        <Grid Background="{Binding Alignment, Converter={StaticResource bgconvert}}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="1*" />
                                 <ColumnDefinition Width="1*" />
@@ -61,7 +61,7 @@
         <ListBox Grid.Column="2" ItemsSource="{Binding Right}" SelectedItem="{Binding SelectedFromRight}" FontSize="16">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" Background="{Binding Alignment, Converter={StaticResource bgconvert}}">
                         <Label Content="{Binding Type}" />
                         <Label Content="{Binding Power}" ContentStringFormat="[{0}]" />
                         <Label Content="{Binding Speed}" ContentStringFormat="[{0}]" />

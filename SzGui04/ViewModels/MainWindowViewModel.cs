@@ -32,6 +32,18 @@ namespace SzGui04.ViewModels
                 (EditHeroCommand as RelayCommand).NotifyCanExecuteChanged();
             }
         }
+        private Superhero selectedFromRight;
+
+        public Superhero SelectedFromRight
+        {
+            get { return selectedFromRight; }
+            set
+            {
+                SetProperty(ref selectedFromRight, value);
+                (AddToRightCommand as RelayCommand).NotifyCanExecuteChanged();
+                (EditHeroCommand as RelayCommand).NotifyCanExecuteChanged();
+            }
+        }
         public ICommand AddToLeftCommand { get; set; }
         public ICommand EditHeroCommand { get; set; }
         public ICommand AddToRightCommand { get; set; }
@@ -45,6 +57,29 @@ namespace SzGui04.ViewModels
         {
             this.logic = logic;
             logic.SetupCollections(Right, Left);
+
+            AddToRightCommand = new RelayCommand(
+                () => logic.GoToWork(SelectedFromLeft),
+                () => SelectedFromLeft != null
+                );
+            AddToLeftCommand = new RelayCommand(
+                () => logic.GoHome(SelectedFromRight),
+                () => SelectedFromRight != null);
+        }
+        public double AVGPower
+        {
+            get
+            {
+                return logic.AVGPower;
+            }
+        }
+
+        public double AVGSpeed
+        {
+            get
+            {
+                return logic.AVGSpeed;
+            }
         }
     }
 }
