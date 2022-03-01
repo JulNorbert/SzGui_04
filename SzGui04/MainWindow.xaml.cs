@@ -24,5 +24,6 @@ namespace SzGui04
         {
             InitializeComponent();
         }
+        
     }
 }

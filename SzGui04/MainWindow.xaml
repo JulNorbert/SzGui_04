@@ -25,7 +25,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="1">
-                        <Grid Background="{Binding Power, Converter={StaticResource bgconvert}}>
+                        <Grid Background="{Binding Power, Converter={StaticResource bgconvert}}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="1*" />
                                 <ColumnDefinition Width="1*" />
@@ -51,7 +51,7 @@
                 Content="{Binding AVGPower}" ContentStringFormat="Power: {0}" />
             <ProgressBar Height="20" Maximum="10" 
                          Value="{Binding AVGPower, Mode=OneWay}" Margin="10"
-                         Foreground="{Binding AVGPower, Mode=OneWay, Converter={StaticResource pbarconvert}}" ValueChanged="ProgressBar_ValueChanged"/>
+                         Foreground="{Binding AVGPower, Mode=OneWay, Converter={StaticResource pbarconvert}}"/>
             <Label HorizontalContentAlignment="Center" FontSize="14"
                 Content="{Binding AVGSpeed}" ContentStringFormat="Speed: {0}" />
             <ProgressBar Height="20" Maximum="10" 
