@@ -1,0 +1,30 @@
+﻿<Window x:Class="SzGui04.EditHero"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SzGui04"
+        mc:Ignorable="d"
+        Title="EditHero" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Name" FontSize="32" HorizontalContentAlignment="Center" Background="LightBlue" Grid.Row="0" ></Label>
+        <TextBox Grid.Row="1"></TextBox>
+        <Label Content="Power" FontSize="32" HorizontalContentAlignment="Center" Background="LightBlue" Grid.Row="2" ></Label>
+        <TextBox Grid.Row="3"></TextBox>
+        <Label Content="Speed" FontSize="32" HorizontalContentAlignment="Center" Background="LightBlue" Grid.Row="4" ></Label>
+        <TextBox Grid.Row="5"></TextBox>
+        <Button HorizontalContentAlignment="Stretch" Grid.Row="6" Content="Save" FontSize="32"></Button>
+
+    </Grid>
+</Window>
+
+    
